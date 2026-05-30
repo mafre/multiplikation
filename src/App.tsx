@@ -34,18 +34,12 @@ function App() {
   return (
     <main className="page">
       <section className="hero">
-        <p className="eyebrow">multiplikation med rutor</p>
+        <p className="eyebrow">räkna med</p>
         <h1>Multiplikation</h1>
-        <p className="subtitle">
-          Klicka på en ruta. Då ritas en rektangel från övre vänstra hörnet till
-          den rutan. Rektangeln visar multiplikation som rader gånger kolumner.
-        </p>
       </section>
-
       <section className="editor">
         <div className="toolbar">
           <div>
-            <p className="label">Fri byggyta</p>
             <h2>
               {selectedCell
                 ? `${rows} × ${cols} = ${total}`
@@ -88,22 +82,9 @@ function App() {
             }),
           )}
         </div>
-
         <div className="explanation">
           {selectedCell ? (
             <>
-              <div className="fact">
-                <span>Rader</span>
-                <strong>{rows}</strong>
-              </div>
-              <div className="fact">
-                <span>Kolumner</span>
-                <strong>{cols}</strong>
-              </div>
-              <div className="fact answer">
-                <span>Totalt</span>
-                <strong>{total}</strong>
-              </div>
               <p className="addition">
                 Som upprepad addition:{" "}
                 <strong>
